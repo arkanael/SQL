@@ -108,4 +108,17 @@ Selecione tudo da tabela produto onde o preco seja menor que 2000;
 
 SELECT * FROM produto WHERE quantidade >= 3 ORDER BY preco;  
 Selecione tudo da tabela produto onde a quantidade seja maior ou igual a 3 ordenado pelo preco;  
+## Operadores relacionais
+SELECT * FROM produto WHERE fabricante = 'Sony' AND preco < 1000;  
+Selecione tudo da tabela produto onde o fabricante seja igual a Sony e o preco menor que 1000;
+
+SELECT * FROM produto WHERE fabricante = 'Sony' OR preco < 1000;  
+Selecione tudo da tabela produto onde o fabricante seja igual a Sony ou o preco menor que 1000;
+
+## Alterar dados de uma tabela
+UPDATE produto SET nome = 'SmartTV' WHERE fabricante = 'LG' AND quantidade = 3;
+Atualizar a tabela produto mudando o nome para SmartTV onde o fabricante seja LG e a quantidade seja 3;  
+
+UPDATE produto SET preco = 2000 WHERE nome = 'SmartTv';
+Atualize a tabela produto mudando o preco para 2000 onde o nome seja 'SmartTV';
 
