@@ -59,3 +59,53 @@ SELECT * FROM produto;
 selecione tudo da tabela produto;
 
 ## Ordenaçao
+SELECT nome, preco, quantidade FROM produto ORDER BY nome;
+Selecione nome, preco e quantidade da tabela produto ordenando pelo nome;
+
+SELECT nome, preco, quantidade FROM produto ORDER BY preco;
+Selecione nome, preco e quantidade da tabela produto ordenando pelo preco;
+
+SELECT * FROM produto ORDER BY quantidade;
+Selecione tudo da tabela produto ordenando pela quantidade;
+
+## Ordenação do maior para o menor
+SELECT nome, preco, quantidade FROM produto ORDER BY nome DESC;
+Selecione nome, preco e quantidade da tabela produto ordenando pelo nome de forma decrescente;
+
+SELECT nome, preco, quantidade FROM produto ORDER BY preco DESC;
+Selecione nome, preco e quantidade da tabela produto ordenando pelo preco de forma decrescente;
+
+SELECT * FROM produto ORDER BY quantidade DESC;
+Selecione tudo da tabela produto ordenando pela quantidade de forma decrescente;
+
+SELECT nome, preco, quantidade FROM produto ORDER BY nome ASC;
+Selecione nome, preco e quantidade da tabela produto ordenando pelo nome de forma crescente;
+
+## Limitar a quantidade de registros exebida na tela
+SELECT fabricante, nome FROM produto limit 3;
+Selecione fabricante e nome da tabela produto limitando em 3;
+
+SELECT nome, preco, quantidade FROM produto ORDER BY nome DESC LIMIT 3;
+Selecione nome, preco e quantidade da tabela produto ordenando pelo nome de forma decrescente limitando em 3;
+
+## Calculos matemáticos
+SELECT nome, preco, preco - 20 FROM produto;
+Selecione nome, preco e preco - 20 da tabela produto;
+
+## Alterar o rótulo de uma coluna
+SELECT nome AS "Nome do Produto", preco AS "Preço", preco - (preco * (20/100)) As "Preço com Desconto" FROM produto;
+Selecione nome como Nome do Produto, preco como Preço, preco - (preco * (20/100)) como "Preço com Desconto" da tabela produto;
+
+## Condições em uma pesquisa (filtros)
+SELECT * FROM produto WHERE fabricante = 'Sony';
+Selecione tudo da tabela produto onde o fabricante seja igual a Sony;
+
+SELECT * FROM produto WHERE fabricante <> 'Sony;'
+Selecione tudo da tabela produto onde o fabricante seja diferente de Sony;
+
+SELECT * FROM produto WHERE preco < 2000;
+Selecione tudo da tabela produto onde o preco seja menor que 2000;
+
+SELECT * FROM produto WHERE quantidade >= 3 ORDER BY preco;
+Selecione tudo da tabela produto onde a quantidade seja maior ou igual a 3 ordenado pelo preco;
+
